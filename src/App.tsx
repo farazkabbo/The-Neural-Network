@@ -3,6 +3,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import NeuralNetworkCanvas from './components/NeuralNetworkCanvas';
 import Home from './pages/Home';
+
+
 import About from './pages/About';
 import Opportunities from './pages/Opportunities';
 import Events from './pages/Events';
