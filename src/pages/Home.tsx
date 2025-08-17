@@ -52,7 +52,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <div className="text-center max-w-4xl mx-auto relative z-10">
           {/* Animated Title with Glowing Effect */}
           <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 text-white glow-text whitespace-nowrap">
+            {/* THE BELOW CODE IS THE ANIMATED TEXT */}
+            {/* <h1 className="text-6xl md:text-8xl font-bold mb-6 text-white glow-text whitespace-nowrap">
               <span className="inline-block">
                 {neuralNetworkText.split('').map((letter, index) => (
                   <span
@@ -72,6 +73,9 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   </span>
                 ))}
               </span>
+            </h1> */}
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 text-white">
+              {neuralNetworkText}
             </h1>
           </div>
 
@@ -97,7 +101,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               onClick={() => onNavigate('about')}
               className="group bg-gradient-to-r from-red-900 to-red-700 hover:from-red-800 hover:to-red-600 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-red-500/25 animate-pulse hover:animate-none"
             >
-              <span className="group-hover:animate-bounce">Explore the Network</span>
+              <span className="group-hover:animate-bounce cursor-pointer">Explore the Network</span>
             </button>
           </div>
         </div>
@@ -166,7 +170,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           <p className="text-gray-300 mb-8 leading-relaxed animate-fade-in-up animation-delay-300">
             Subscribe to receive updates about events, research opportunities, and community news.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-600">
+          <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-600">
             <input
               type="email"
               value={email}
@@ -181,7 +185,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             >
               <span className="group-hover:animate-pulse">Subscribe</span>
             </button>
-          </div>
+          </form>
         </div>
       </section>
 
