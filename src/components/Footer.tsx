@@ -3,7 +3,7 @@ import { Instagram, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative bg-red-950/80 border-t border-red-800/30 py-16 px-6 z-10">
+    <footer className="relative border-t border-red-800/30 py-16 px-6 z-10" style={{ backgroundColor: 'rgba(53, 4, 4, 0.8)' }}>
       <div className="container mx-auto max-w-5xl text-center space-y-12">
         
         {/* Main Identity & Contact Info */}
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             Ross Building, 115 Campus Walk S448 <br />
             North York, ON M3J 2S5
           </p>
-          <a href="mailto:neuralnetworkyu@gmail.com"
+          <a href="mailto:neuralnetworkyu@gmail.com" 
            className="mt-4 text-lg text-red-300 font-medium cursor-pointer">
             neuralnetworkyu@gmail.com
           </a>
