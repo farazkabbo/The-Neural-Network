@@ -10,11 +10,7 @@ const Join: React.FC = () => {
   }, []);
 
   const benefits = [
-    {
-      icon: Brain,
-      text: "Access Research Opportunities",
-      description: "Join cutting-edge neuroscience research projects"
-    },
+   
     {
       icon: Users,
       text: "Connect with Like-minded Individuals",
