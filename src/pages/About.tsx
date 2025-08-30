@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Users, Brain, Zap, Globe, MessageCircle, Code, Calendar, GraduationCap, Instagram, Linkedin } from 'lucide-react';
 
+import Mahr from "../assets/Dr. Mahr.png";
+
+
 const About = () => {
   const [visibleCards, setVisibleCards] = useState(new Set());
 
@@ -28,13 +31,13 @@ const About = () => {
       icon: GraduationCap,
       members: [
         { 
-          name: "Dr. Jane Smith", 
+          name: "Dr. Johannes Mahr", 
           role: "Faculty Advisor", 
-          bio: "Professor of Neuroscience providing academic guidance and research mentorship", 
+          bio: "Assistant Professor at York University in the Department of Philosophy", 
           specialty: "Cognitive Neuroscience",
-          image: "/api/placeholder/150/150", // Replace with actual image path
+          image: Mahr, 
           instagram: "https://instagram.com/drjanesmith",
-          linkedin: "https://linkedin.com/in/drjanesmith"
+          linkedin: "https://www.linkedin.com/in/johannes-mahr-43b010215/"
         }
       ]
     },
