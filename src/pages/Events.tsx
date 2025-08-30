@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Calendar, X, MapPin, Users, Heart } from 'lucide-react';
-
-
+import SpeedFriend from "../assets/speed_friend.avif"
+import TriviaNight from "../assets/triva_night.avif"
+import ClubFair from "../assets/ClubFair.avif"
+import Meeting from "../assets/Meeting.avif"
 
 const Events: React.FC = () => {
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
@@ -15,11 +17,11 @@ const Events: React.FC = () => {
       location: 'Founders 306, SCR',
       status: 'RSVP',
       type: 'Social',
-      image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=300&fit=crop&crop=center',
+      image: SpeedFriend,
       description: 'Meet new friends in a fun, structured environment! Speed friending is like speed dating but for making platonic connections.',
       details: 'Join us for an evening of meeting new people and making lasting friendships. Light refreshments will be provided.',
-      capacity: '30 people',
-      organizer: 'Social Committee'
+      organizer: 'Social Committee',
+      take_to: "https://docs.google.com/forms/d/e/1FAIpQLSevn25-eWmXPkwpPu3w1kurqHe4qBIEaXc6ZMyi_qVneNsIxw/viewform"
     },
     {
       id: 2,
@@ -29,11 +31,11 @@ const Events: React.FC = () => {
       location: 'Location is TBD',
       status: 'RSVP',
       type: 'Entertainment',
-      image: 'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=400&h=300&fit=crop&crop=center',
+      image: TriviaNight,
       description: 'Test your knowledge across various categories in our monthly trivia competition!',
       details: 'Teams of 4-6 people will compete in multiple rounds covering pop culture, history, science, and more. Prizes for top 3 teams!',
-      capacity: '80 people',
-      organizer: 'Events Committee'
+      organizer: 'Events Committee',
+      take_to: "https://docs.google.com/forms/d/e/1FAIpQLSf6zeis8JKANFGzHJ_T5Jxf4Ov1faUkUL0VTHLYtI43eEVTiA/viewform"
     },
     {
       id: 3,
@@ -44,11 +46,11 @@ const Events: React.FC = () => {
       location: 'YH/RGSS/CSQ',
       status: 'Tabling at the SCLD Club Fair at York University',
       type: 'Fair',
-      image: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=400&h=300&fit=crop&crop=center',
+      image: ClubFair,
       description: 'Discover student organizations and get involved in campus life!',
       details: 'Visit our table to learn about joining our community and upcoming events. Meet current members and sign up for future activities.',
-      capacity: 'Open to all',
-      organizer: 'SCLD'
+      organizer: 'SCLD',
+      take_to: ""
     },
     {
       id: 4,
@@ -58,11 +60,11 @@ const Events: React.FC = () => {
       location: 'ONLINE',
       status: 'Virtual Event',
       type: 'Meeting',
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&crop=center',
+      image: Meeting,
       description: 'Join us for our inaugural general meeting to learn about our mission and upcoming plans.',
       details: 'This virtual meeting will cover our organization goals, upcoming events, and how to get involved. All members and interested students welcome.',
-      capacity: 'Unlimited',
-      organizer: 'Executive Team'
+      organizer: 'Executive Team',
+      take_to: ""
     }
   ];
 
@@ -93,7 +95,7 @@ const Events: React.FC = () => {
                   <img 
                     src={event.image} 
                     alt={event.title}
-                    className="w-full h-48 object-cover rounded-xl mb-4"
+                    className="w-full h-full object-cover rounded-xl mb-4"
                   />
                 </div>
                 <h2 className="text-3xl font-bold text-white mb-2">
@@ -185,14 +187,6 @@ const Events: React.FC = () => {
                       <span className="text-red-300 font-medium">Location</span>
                     </div>
                     <p className="text-white">{selectedEvent.location}</p>
-                  </div>
-
-                  <div className="bg-red-800/30 rounded-lg p-4">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <Users className="w-5 h-5 text-red-300" />
-                      <span className="text-red-300 font-medium">Capacity</span>
-                    </div>
-                    <p className="text-white">{selectedEvent.capacity}</p>
                   </div>
 
                   <div className="bg-red-800/30 rounded-lg p-4">
