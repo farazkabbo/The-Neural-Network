@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Users, Brain, Zap, Globe, MessageCircle, Code, Calendar, GraduationCap, Instagram, Linkedin } from 'lucide-react';
-
 import Mahr from "../assets/Dr. Mahr.png";
+import Rahbir from "../assets/Rahbir.jpg";
+import Faraz from "../assets/Faraz.jpeg";
+
+
 
 
 const About = () => {
@@ -33,8 +36,8 @@ const About = () => {
         { 
           name: "Dr. Johannes Mahr", 
           role: "Faculty Advisor", 
-          bio: "Assistant Professor at York University in the Department of Philosophy", 
-          specialty: "Cognitive Neuroscience",
+          // bio: "Assistant Professor at York University in the Department of Philosophy", 
+          // specialty: "Cognitive Neuroscience",
           image: Mahr, 
           instagram: "https://instagram.com/drjanesmith",
           linkedin: "https://www.linkedin.com/in/johannes-mahr-43b010215/"
@@ -46,32 +49,23 @@ const About = () => {
       icon: Brain,
       members: [
         { 
-          name: "Dr. Sarah Chen", 
+          name: "Gigi", 
           role: "President", 
-          bio: "Neuroscience PhD leading TNN's vision for interdisciplinary collaboration", 
-          specialty: "Cognitive Networks",
+          // bio: "Neuroscience PhD leading TNN's vision for interdisciplinary collaboration", 
+          // specialty: "Cognitive Networks",
           image: "/api/placeholder/150/150", // Replace with actual image path
           instagram: "https://instagram.com/sarahchen",
           linkedin: "https://linkedin.com/in/sarahchen"
         },
         { 
-          name: "Marcus Rodriguez", 
+          name: "Meryam", 
           role: "Vice President", 
-          bio: "Psychology graduate fostering community growth and academic excellence", 
-          specialty: "Behavioral Analysis",
+          // bio: "Psychology graduate fostering community growth and academic excellence", 
+          // specialty: "Behavioral Analysis",
           image: "/api/placeholder/150/150", // Replace with actual image path
           instagram: "https://instagram.com/marcusrodriguez",
           linkedin: "https://linkedin.com/in/marcusrodriguez"
         },
-        { 
-          name: "Emily Zhang", 
-          role: "Past President", 
-          bio: "Founding member who established TNN's core values and mission", 
-          specialty: "Neural Architecture",
-          image: "/api/placeholder/150/150", // Replace with actual image path
-          instagram: "https://instagram.com/emilyzhang",
-          linkedin: "https://linkedin.com/in/emilyzhang"
-        }
       ]
     },
     {
@@ -79,133 +73,100 @@ const About = () => {
       icon: Calendar,
       members: [
         { 
-          name: "Alex Thompson", 
+          name: "Hale", 
           role: "Secretary", 
-          bio: "Organizing meetings and maintaining official records with precision", 
-          specialty: "Documentation Systems",
+          // bio: "Organizing meetings and maintaining official records with precision", 
+          // specialty: "Documentation Systems",
           image: "/api/placeholder/150/150", // Replace with actual image path
           instagram: "https://instagram.com/alexthompson",
           linkedin: "https://linkedin.com/in/alexthompson"
         },
-        { 
-          name: "Jordan Kim", 
-          role: "Assistant Secretary", 
-          bio: "Supporting administrative functions and member communications", 
-          specialty: "Information Processing",
-          image: "/api/placeholder/150/150", // Replace with actual image path
-          instagram: "https://instagram.com/jordankim",
-          linkedin: "https://linkedin.com/in/jordankim"
-        },
-        { 
-          name: "Taylor Singh", 
-          role: "Communications", 
-          bio: "Ensuring clear information flow across all TNN channels", 
-          specialty: "Neural Pathways",
-          image: "/api/placeholder/150/150", // Replace with actual image path
-          instagram: "https://instagram.com/taylorsingh",
-          linkedin: "https://linkedin.com/in/taylorsingh"
-        }
       ]
     },
     {
-      title: "Logistics Team",
+      title: "Directors",
       icon: Globe,
       members: [
         { 
-          name: "David Park", 
-          role: "Logistics Lead", 
-          bio: "Coordinating events and managing resources across Canadian universities", 
-          specialty: "Network Optimization",
+          name: "Caitlin", 
+          role: "Communications Director", 
+          // bio: "Coordinating events and managing resources across Canadian universities", 
+          // specialty: "Network Optimization",
           image: "/api/placeholder/150/150", // Replace with actual image path
           instagram: "https://instagram.com/davidpark",
           linkedin: "https://linkedin.com/in/davidpark"
         },
         { 
-          name: "Maya Patel", 
-          role: "Event Coordinator", 
-          bio: "Planning engaging workshops and academic conferences", 
-          specialty: "Synaptic Planning",
+          name: "Zainab", 
+          role: "Event Director", 
+          // bio: "Planning engaging workshops and academic conferences", 
+          // specialty: "Synaptic Planning",
           image: "/api/placeholder/150/150", // Replace with actual image path
           instagram: "https://instagram.com/mayapatel",
           linkedin: "https://linkedin.com/in/mayapatel"
         },
         { 
-          name: "Chris Wilson", 
-          role: "Resource Manager", 
-          bio: "Overseeing equipment and venue arrangements", 
-          specialty: "Infrastructure Mapping",
-          image: "/api/placeholder/150/150", // Replace with actual image path
-          instagram: "https://instagram.com/chriswilson",
-          linkedin: "https://linkedin.com/in/chriswilson"
+          name: "Faraz", 
+          role: "Technical Dirtector", 
+          // bio: "Overseeing equipment and venue arrangements", 
+          // specialty: "Infrastructure Mapping",
+          image: Faraz,
+          instagram: "https://www.instagram.com/mewdiegamer/",
+          linkedin: "https://www.linkedin.com/in/mohammed-faraz-kabbo/"
         }
       ]
     },
     {
-      title: "Technical Team",
+      title: "Assistants",
       icon: Code,
       members: [
         { 
-          name: "Lisa Wang", 
-          role: "Tech Lead", 
-          bio: "Developing digital platforms and innovative learning tools", 
-          specialty: "AI Architecture",
+          name: "Tasnia", 
+          role: "Media Assistant", 
+          // bio: "Developing digital platforms and innovative learning tools", 
+          // specialty: "AI Architecture",
           image: "/api/placeholder/150/150", // Replace with actual image path
           instagram: "https://instagram.com/lisawang",
           linkedin: "https://linkedin.com/in/lisawang"
         },
         { 
-          name: "Ryan O'Connor", 
+          name: "Event Assistant", 
           role: "Web Developer", 
-          bio: "Creating responsive web experiences for the TNN community", 
-          specialty: "Interface Design",
+          // bio: "Creating responsive web experiences for the TNN community", 
+          // specialty: "Interface Design",
           image: "/api/placeholder/150/150", // Replace with actual image path
           instagram: "https://instagram.com/ryanoconnor",
           linkedin: "https://linkedin.com/in/ryanoconnor"
         },
         { 
-          name: "Priya Sharma", 
-          role: "Data Analyst", 
-          bio: "Processing research data and generating insights", 
-          specialty: "Pattern Recognition",
+          name: "Aditi", 
+          role: "Event Assistant", 
+          // bio: "Processing research data and generating insights", 
+          // specialty: "Pattern Recognition",
           image: "/api/placeholder/150/150", // Replace with actual image path
           instagram: "https://instagram.com/priyasharma",
           linkedin: "https://linkedin.com/in/priyasharma"
-        }
+        },
+        { 
+          name: "Hiba", 
+          role: "Communications Assistant", 
+          // bio: "Processing research data and generating insights", 
+          // specialty: "Pattern Recognition",
+          image: "/api/placeholder/150/150", // Replace with actual image path
+          instagram: "https://instagram.com/priyasharma",
+          linkedin: "https://linkedin.com/in/priyasharma"
+        },
+        { 
+          name: "Rahbir", 
+          role: "Technical Assistant", 
+          // bio: "Processing research data and generating insights", 
+          // specialty: "Pattern Recognition",
+          image: Rahbir,
+          instagram: "https://www.instagram.com/rahbir_mahdi/",
+          linkedin: "https://www.linkedin.com/in/rahbirmahdi/"
+        },
       ]
     },
-    {
-      title: "Social Media Team",
-      icon: MessageCircle,
-      members: [
-        { 
-          name: "Sophie Martin", 
-          role: "Social Media Manager", 
-          bio: "Building online community and sharing neuroscience discoveries", 
-          specialty: "Viral Networks",
-          image: "/api/placeholder/150/150", // Replace with actual image path
-          instagram: "https://instagram.com/sophiemartin",
-          linkedin: "https://linkedin.com/in/sophiemartin"
-        },
-        { 
-          name: "James Liu", 
-          role: "Content Creator", 
-          bio: "Producing engaging educational content and visual stories", 
-          specialty: "Creative Synapses",
-          image: "/api/placeholder/150/150", // Replace with actual image path
-          instagram: "https://instagram.com/jamesliu",
-          linkedin: "https://linkedin.com/in/jamesliu"
-        },
-        { 
-          name: "Zoe Brown", 
-          role: "Community Manager", 
-          bio: "Fostering meaningful connections in digital spaces", 
-          specialty: "Social Cognition",
-          image: "/api/placeholder/150/150", // Replace with actual image path
-          instagram: "https://instagram.com/zoebrown",
-          linkedin: "https://linkedin.com/in/zoebrown"
-        }
-      ]
-    }
   ];
 
   return (
@@ -309,13 +270,12 @@ const About = () => {
                             />
                             
                             {/* Social Media Icons Overlay */}
-                            <div className="absolute inset-0 bg-black/70 flex items-center justify-center space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="absolute inset-0 bg-black/70 flex items-center justify-center space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                               <a 
                                 href={member.instagram}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white hover:text-pink-400 transition-colors duration-200"
-                                onClick={(e) => e.stopPropagation()}
                               >
                                 <Instagram className="w-5 h-5" />
                               </a>
@@ -324,7 +284,6 @@ const About = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white hover:text-blue-400 transition-colors duration-200"
-                                onClick={(e) => e.stopPropagation()}
                               >
                                 <Linkedin className="w-5 h-5" />
                               </a>
@@ -343,7 +302,7 @@ const About = () => {
                           {member.role}
                         </div>
 
-                        <p className="text-white/70 mb-4 leading-relaxed group-hover:text-white/90 transition-colors duration-300">
+                        {/* <p className="text-white/70 mb-4 leading-relaxed group-hover:text-white/90 transition-colors duration-300">
                           {member.bio}
                         </p>
 
@@ -351,7 +310,7 @@ const About = () => {
                           <span className="px-4 py-2 bg-white/10 rounded-full text-sm font-medium border border-white/20 text-white/80">
                             {member.specialty}
                           </span>
-                        </div>
+                        </div> */}
 
                         {/* Hover effect particles */}
                         <div className="absolute top-2 right-2 w-2 h-2 bg-white rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping transition-all duration-300"></div>
