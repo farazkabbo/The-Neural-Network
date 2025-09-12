@@ -4,9 +4,16 @@ import icon from '../assets/icon.jpg';
 interface HeaderProps {
   currentPage: string;
   onNavigate: (page: string) => void;
+  isMobileMenuOpen?: boolean;
+  onToggleMobileMenu?: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
+const Header: React.FC<HeaderProps> = ({ 
+  currentPage, 
+  onNavigate, 
+  isMobileMenuOpen = false, 
+  onToggleMobileMenu 
+}) => {
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
@@ -24,12 +31,12 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
             src={icon}
             alt="Logo"
             className="h-10 w-auto cursor-pointer rounded-full"
-            onClick={() => onNavigate('/home')}
+            onClick={() => onNavigate('home')}
           />
         </div>
 
-        {/* Navigation */}
-        <nav className="flex gap-6 text-white">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex gap-6 text-white">
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -42,6 +49,31 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
             </button>
           ))}
         </nav>
+
+        {/* Mobile Burger Button */}
+        {onToggleMobileMenu && (
+          <button
+            onClick={onToggleMobileMenu}
+            className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none"
+            aria-label="Toggle mobile menu"
+          >
+            <div
+              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''
+              }`}
+            ></div>
+            <div
+              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMobileMenuOpen ? 'opacity-0' : ''
+              }`}
+            ></div>
+            <div
+              className={`w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
+              }`}
+            ></div>
+          </button>
+        )}
       </div>
     </header>
   );
