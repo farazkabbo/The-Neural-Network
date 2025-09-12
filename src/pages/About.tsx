@@ -9,7 +9,7 @@ import Zainab from "../assets/3.jpeg";
 import Hale from "../assets/7.jpeg";
 import Caitlin from "../assets/1.jpeg";
 import Ralph from "../assets/2.jpg";
-
+import Aditi from "../assets/4.jpeg";
 
 
 
@@ -149,7 +149,7 @@ const About = () => {
           role: "Event Assistant", 
           // bio: "Processing research data and generating insights", 
           // specialty: "Pattern Recognition",
-          image: "/api/placeholder/150/150", // Replace with actual image path
+          image: Aditi, // Replace with actual image path
           instagram: "https://instagram.com/priyasharma",
           linkedin: "https://linkedin.com/in/priyasharma"
         },
