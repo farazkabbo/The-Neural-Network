@@ -1,10 +1,9 @@
-import  { useState } from 'react';
+
+import  { useState, type SetStateAction } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import NeuralNetworkCanvas from './components/NeuralNetworkCanvas';
 import Home from './pages/Home';
-
-
 import About from './pages/About';
 import Opportunities from './pages/Opportunities';
 import Events from './pages/Events';
@@ -13,10 +12,16 @@ import Join from './pages/Join';
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleNavigation = (page: string) => {
+  const handleNavigation = (page: SetStateAction<string>) => {
     setCurrentPage(page);
+    setIsMobileMenuOpen(false); // Close mobile menu when navigating
     window.scrollTo(0, 0);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const renderPageContent = () => {
@@ -44,7 +49,7 @@ const App = () => {
 
       {/* Neural Network Canvas */}
       <NeuralNetworkCanvas 
-        currentPage={currentPage} 
+        currentPage={currentPage}
         onScrollProgress={setScrollProgress}
       />
 
@@ -52,7 +57,57 @@ const App = () => {
       <Header 
         currentPage={currentPage}
         onNavigate={handleNavigation}
+        isMobileMenuOpen={isMobileMenuOpen}
+        onToggleMobileMenu={toggleMobileMenu}
       />
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-40 md:hidden">
+          <div className="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
+            <button
+              onClick={() => handleNavigation('home')}
+              className={`hover:text-red-400 transition-colors ${
+                currentPage === 'home' ? 'text-red-400' : ''
+              }`}
+            >
+              Home
+            </button>
+            <button
+              onClick={() => handleNavigation('about')}
+              className={`hover:text-red-400 transition-colors ${
+                currentPage === 'about' ? 'text-red-400' : ''
+              }`}
+            >
+              About
+            </button>
+            <button
+              onClick={() => handleNavigation('opportunities')}
+              className={`hover:text-red-400 transition-colors ${
+                currentPage === 'opportunities' ? 'text-red-400' : ''
+              }`}
+            >
+              Opportunities
+            </button>
+            <button
+              onClick={() => handleNavigation('events')}
+              className={`hover:text-red-400 transition-colors ${
+                currentPage === 'events' ? 'text-red-400' : ''
+              }`}
+            >
+              Events
+            </button>
+            <button
+              onClick={() => handleNavigation('join')}
+              className={`hover:text-red-400 transition-colors ${
+                currentPage === 'join' ? 'text-red-400' : ''
+              }`}
+            >
+              Join
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Page Content */}
       <main className="relative z-10">
