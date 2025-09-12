@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { UserPlus, Brain, Users, Award, Zap, Network } from 'lucide-react';
+import { UserPlus,  Users, Award, Zap, Network } from 'lucide-react';
 
 const Join: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -170,7 +170,7 @@ const Join: React.FC = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes spin-slow {
           from { transform: rotate(0deg); }
           to { transform: rotate(360deg); }

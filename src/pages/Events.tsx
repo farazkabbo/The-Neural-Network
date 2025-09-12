@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, X, MapPin, Users, Heart } from 'lucide-react';
+import { Calendar, X, MapPin, Heart } from 'lucide-react';
 import SpeedFriend from "../assets/speed_friend.avif"
 import TriviaNight from "../assets/triva_night.avif"
 import ClubFair from "../assets/ClubFair.avif"

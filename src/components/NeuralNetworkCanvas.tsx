@@ -157,7 +157,7 @@ const NeuralNetworkCanvas: React.FC<NeuralNetworkCanvasProps> = ({
       });
 
       // Draw neurons with enhanced pulsing
-      neurons.forEach((neuron, index) => {
+      neurons.forEach((neuron,) => {
         neuron.x += neuron.vx;
         neuron.y += neuron.vy;
         

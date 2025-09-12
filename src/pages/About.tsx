@@ -1,8 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { Users, Brain, Zap, Globe, MessageCircle, Code, Calendar, GraduationCap, Instagram, Linkedin } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Brain,  Globe, Code, Calendar, GraduationCap, Instagram, Linkedin } from 'lucide-react';
 import Mahr from "../assets/Dr. Mahr.png";
 import Rahbir from "../assets/Rahbir.jpg";
 import Faraz from "../assets/Faraz.jpeg";
+import Gigi from "../assets/Gigi.jpeg";
+import Tasnia from "../assets/6.jpg";
+import Zainab from "../assets/3.jpeg";
+import Hale from "../assets/7.jpeg";
+import Caitlin from "../assets/1.jpeg";
+import Ralph from "../assets/2.jpg";
 
 
 
@@ -53,7 +59,7 @@ const About = () => {
           role: "President", 
           // bio: "Neuroscience PhD leading TNN's vision for interdisciplinary collaboration", 
           // specialty: "Cognitive Networks",
-          image: "/api/placeholder/150/150", // Replace with actual image path
+          image: Gigi, // Replace with actual image path
           instagram: "https://instagram.com/sarahchen",
           linkedin: "https://linkedin.com/in/sarahchen"
         },
@@ -77,7 +83,7 @@ const About = () => {
           role: "Secretary", 
           // bio: "Organizing meetings and maintaining official records with precision", 
           // specialty: "Documentation Systems",
-          image: "/api/placeholder/150/150", // Replace with actual image path
+          image: Hale, // Replace with actual image path
           instagram: "https://instagram.com/alexthompson",
           linkedin: "https://linkedin.com/in/alexthompson"
         },
@@ -92,7 +98,7 @@ const About = () => {
           role: "Communications Director", 
           // bio: "Coordinating events and managing resources across Canadian universities", 
           // specialty: "Network Optimization",
-          image: "/api/placeholder/150/150", // Replace with actual image path
+          image: Caitlin, // Replace with actual image path
           instagram: "https://instagram.com/davidpark",
           linkedin: "https://linkedin.com/in/davidpark"
         },
@@ -101,7 +107,7 @@ const About = () => {
           role: "Event Director", 
           // bio: "Planning engaging workshops and academic conferences", 
           // specialty: "Synaptic Planning",
-          image: "/api/placeholder/150/150", // Replace with actual image path
+          image: Zainab, // Replace with actual image path
           instagram: "https://instagram.com/mayapatel",
           linkedin: "https://linkedin.com/in/mayapatel"
         },
@@ -125,16 +131,16 @@ const About = () => {
           role: "Media Assistant", 
           // bio: "Developing digital platforms and innovative learning tools", 
           // specialty: "AI Architecture",
-          image: "/api/placeholder/150/150", // Replace with actual image path
+          image: Tasnia, // Replace with actual image path
           instagram: "https://instagram.com/lisawang",
           linkedin: "https://linkedin.com/in/lisawang"
         },
         { 
-          name: "Event Assistant", 
-          role: "Web Developer", 
+          name: "Ralph", 
+          role: "Event Assistant", 
           // bio: "Creating responsive web experiences for the TNN community", 
           // specialty: "Interface Design",
-          image: "/api/placeholder/150/150", // Replace with actual image path
+          image: Ralph, // Replace with actual image path
           instagram: "https://instagram.com/ryanoconnor",
           linkedin: "https://linkedin.com/in/ryanoconnor"
         },
@@ -345,7 +351,7 @@ const About = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes spin-slow {
           from { transform: rotate(0deg); }
           to { transform: rotate(360deg); }
