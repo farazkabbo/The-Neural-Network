@@ -8,26 +8,13 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   const [email, setEmail] = useState('');
   const [isVisible, setIsVisible] = useState(false);
-  const [letterIndex, setLetterIndex] = useState(0);
+
 
   const neuralNetworkText = "The Neural Network";
 
   // Animate text reveal on component mount
   useEffect(() => {
     setIsVisible(true);
-    
-    // Animate letters one by one
-    const interval = setInterval(() => {
-      setLetterIndex((prev) => {
-        if (prev < neuralNetworkText.length) {
-          return prev + 1;
-        }
-        clearInterval(interval);
-        return prev;
-      });
-    }, 100);
-
-    return () => clearInterval(interval);
   }, []);
 
   const handleEmailSubmit = (e: React.FormEvent) => {
@@ -52,28 +39,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <div className="text-center max-w-4xl mx-auto relative z-10">
           {/* Animated Title with Glowing Effect */}
           <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            {/* THE BELOW CODE IS THE ANIMATED TEXT */}
-            {/* <h1 className="text-6xl md:text-8xl font-bold mb-6 text-white glow-text whitespace-nowrap">
-              <span className="inline-block">
-                {neuralNetworkText.split('').map((letter, index) => (
-                  <span
-                    key={index}
-                    className={`inline-block transition-all duration-300 hover:text-red-400 hover:scale-110 ${
-                      index < letterIndex 
-                        ? 'animate-bounce opacity-100 transform translate-y-0' 
-                        : 'opacity-0 transform translate-y-4'
-                    }`}
-                    style={{
-                      animationDelay: `${index * 0.1}s`,
-                      animationDuration: '0.6s',
-                      animationFillMode: 'forwards'
-                    }}
-                  >
-                    {letter === ' ' ? '\u00A0' : letter}
-                  </span>
-                ))}
-              </span>
-            </h1> */}
+            
             <h1 className="text-6xl md:text-8xl font-bold mb-6 text-white">
               {neuralNetworkText}
             </h1>

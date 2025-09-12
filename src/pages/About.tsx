@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Users, Brain, Zap, Globe, MessageCircle, Code, Calendar, GraduationCap, Instagram, Linkedin } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Brain,  Globe, Code, Calendar, GraduationCap, Instagram, Linkedin } from 'lucide-react';
 import Mahr from "../assets/Dr. Mahr.png";
 import Rahbir from "../assets/Rahbir.jpg";
 import Faraz from "../assets/Faraz.jpeg";
